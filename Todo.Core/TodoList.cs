@@ -26,8 +26,7 @@ namespace Todo.Core
         public IEnumerable<TodoItem> Find(string substring)
         {
             return this.items.Where(i =>
-                i.Title.Contains(substring ?? string.Empty,
-StringComparison.OrdinalIgnoreCase));
+                i.Title.Contains(substring ?? string.Empty, StringComparison.OrdinalIgnoreCase));
         }
 
         public int Count => this.items.Count;
